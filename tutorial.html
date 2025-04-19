@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tutorial</title>
+  </head>
+  <body>
+    <h1>Project Selector</h1>
+    <form>
+      <input
+        type="radio"
+        id="usernameInput"
+        name="projectSelector"
+        value="username"
+      />
+      <label for="usernameInput">Username Input</label><br />
+      <input
+        type="radio"
+        id="circumferenceCalculator"
+        name="projectSelector"
+        value="circumferenceCalculator"
+      />
+      <label for="circumferenceCalculator">circumference Calculator</label
+      ><br />
+      <input
+        type="radio"
+        id="clickerGame"
+        name="projectSelector"
+        value="clickerGame"
+      />
+      <label for="clickerGame">Username Input</label><br />
+    </form>
+
+    <h1 id="myh1">Welcome</h1>
+    <label class="label">username: </label>
+    <input id="myText" /><br /><br />
+    <button id="mySubmit">submit</button> <br /><br />
+
+    <h2>Circumference Calculator</h2>
+    <h3 id="myh3">Circumference</h3>
+    <form>
+      <input type="radio" id="pi" name="circCalcAnsSelector" value="pi" />
+      <label for="pi">PI</label><br />
+      <input
+        type="radio"
+        id="number"
+        name="circCalcAnsSelector"
+        value="number"
+      />
+      <label for="number">number</label><br />
+      <button type="button" onclick="getRadioValue()">submit type</button>
+    </form>
+
+    <label class="label">radius: </label>
+    <input id="myRadius" /> <br /><br />
+    <button id="myRadiusSubmit">submit</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>

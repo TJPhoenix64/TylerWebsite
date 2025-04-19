@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tutorial</title>
+  </head>
+  <body>
+    <h1>Project Selector</h1>
+    <ul>
+      <li><a href="#project1">Username Input</a></li>
+      <br />
+      <li><a href="#project2">Circumference Calculator</a></li>
+      <br />
+      <li><a href="#project3">Clicker Game</a></li>
+    </ul>
+    <br /><br />
+
+    <div id="project1">
+      <h2 id="myh1">Welcome</h2>
+      <label class="label">username: </label>
+      <input id="myText" /><br /><br />
+      <button id="mySubmit">submit</button>
+    </div>
+    <br /><br />
+
+    <div id="project2">
+      <h2>Circumference Calculator</h2>
+      <h3 id="myh3">Circumference</h3>
+      <form>
+        <input type="radio" id="pi" name="circCalcAnsSelector" value="pi" />
+        <label for="pi">PI</label><br />
+        <input
+          type="radio"
+          id="number"
+          name="circCalcAnsSelector"
+          value="number"
+        />
+        <label for="number">number</label><br />
+        <button type="button" onclick="getRadioValue()">submit type</button>
+      </form>
+
+      <label class="label">radius: </label>
+      <input id="myRadius" /> <br /><br />
+      <button id="myRadiusSubmit">submit</button>
+    </div>
+    <br /><br /><br />
+
+    <label id="countLabel">0</label>
+    <div id="btnContainer">
+      <button id="decreaseBtn" class="buttons">decrease</button>
+      <button id="resetBtn" class="buttons">reset</button>
+      <button id="increaseBtn" class="buttons">increase</button>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <p>hi my name is Tyler</p>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,62 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<!-- saved from url=(0044)http://127.0.0.1:5500/Projects.html#project2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Tutorial</title>
-  </head>
-  <body>
+  <link rel="stylesheet" href="./Tutorial_files/style.css"></head>
+  <body data-new-gr-c-s-check-loaded="14.1232.0" data-gr-ext-installed="">
     <h1>Project Selector</h1>
-    <form>
-      <input
-        type="radio"
-        id="usernameInput"
-        name="projectSelector"
-        value="username"
-      />
-      <label for="usernameInput">Username Input</label><br />
-      <input
-        type="radio"
-        id="circumferenceCalculator"
-        name="projectSelector"
-        value="circumferenceCalculator"
-      />
-      <label for="circumferenceCalculator">circumference Calculator</label
-      ><br />
-      <input
-        type="radio"
-        id="clickerGame"
-        name="projectSelector"
-        value="clickerGame"
-      />
-      <label for="clickerGame">Username Input</label><br />
-    </form>
+    <ul>
+      <li><a href="http://127.0.0.1:5500/Projects.html#project1">Username Input</a></li>
+      <br>
+      <li><a href="http://127.0.0.1:5500/Projects.html#project2">Circumference Calculator</a></li>
+      <br>
+      <li><a href="http://127.0.0.1:5500/Projects.html#project3">Clicker Game</a></li>
+    </ul>
+    <br><br>
 
-    <h1 id="myh1">Welcome</h1>
-    <label class="label">username: </label>
-    <input id="myText" /><br /><br />
-    <button id="mySubmit">submit</button> <br /><br />
+    <div id="project1">
+      <h2 id="myh1">Hello tyler</h2>
+      <label class="label">username: </label>
+      <input id="myText"><br><br>
+      <button id="mySubmit">submit</button>
+    </div>
+    <br><br>
 
-    <h2>Circumference Calculator</h2>
-    <h3 id="myh3">Circumference</h3>
-    <form>
-      <input type="radio" id="pi" name="circCalcAnsSelector" value="pi" />
-      <label for="pi">PI</label><br />
-      <input
-        type="radio"
-        id="number"
-        name="circCalcAnsSelector"
-        value="number"
-      />
-      <label for="number">number</label><br />
-      <button type="button" onclick="getRadioValue()">submit type</button>
-    </form>
+    <div id="project2">
+      <h2>Circumference Calculator</h2>
+      <h3 id="myh3">your circumference is: 4pi</h3>
+      <form>
+        <input type="radio" id="pi" name="circCalcAnsSelector" value="pi">
+        <label for="pi">PI</label><br>
+        <input type="radio" id="number" name="circCalcAnsSelector" value="number">
+        <label for="number">number</label><br>
+        <button type="button" onclick="getRadioValue()">submit type</button>
+      </form>
 
-    <label class="label">radius: </label>
-    <input id="myRadius" /> <br /><br />
-    <button id="myRadiusSubmit">submit</button>
+      <label class="label">radius: </label>
+      <input id="myRadius"> <br><br>
+      <button id="myRadiusSubmit">submit</button>
+    </div>
+    <br><br>
 
-    <script src="index.js"></script>
-  </body>
-</html>
+    <script src="./Tutorial_files/index.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

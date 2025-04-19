@@ -74,6 +74,17 @@ resetBtn.onclick = function(){
 }
 
 
+const myRNGButton = document.getElementById("myRNGButton");
+const myRNGLabel = document.getElementById("myRNGLabel");
+
+const min = 1;
+const max = 6;
+let randomNum;
+
+myRNGButton.onclick = function(){
+    randomNum = Math.floor(Math.random() * max) + min;
+    myRNGLabel.textContent = randomNum;
+}
 
 /*
 let username;

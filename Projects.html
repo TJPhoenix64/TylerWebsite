@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Tutorial</title>
+    <title>Projects</title>
   </head>
   <body>
     <h1>Project Selector</h1>
@@ -14,12 +14,14 @@
       <li><a href="#project2">Circumference Calculator</a></li>
       <br />
       <li><a href="#project3">Clicker Game</a></li>
+      <br />
+      <li><a href="#project4">Random Number Generator</a></li>
     </ul>
     <br /><br />
 
     <div id="project1">
       <h2 id="myh1">Welcome</h2>
-      <label class="label">username: </label>
+      <label class="label">username:</label>
       <input id="myText" /><br /><br />
       <button id="mySubmit">submit</button>
     </div>
@@ -41,21 +43,25 @@
         <button type="button" onclick="getRadioValue()">submit type</button>
       </form>
 
-      <label class="label">radius: </label>
+      <label class="label">radius:</label>
       <input id="myRadius" /> <br /><br />
       <button id="myRadiusSubmit">submit</button>
     </div>
     <br /><br /><br />
-
-    <label id="countLabel">0</label>
-    <div id="btnContainer">
-      <button id="decreaseBtn" class="buttons">decrease</button>
-      <button id="resetBtn" class="buttons">reset</button>
-      <button id="increaseBtn" class="buttons">increase</button>
+    <div id="project3">
+      <label id="countLabel">0</label>
+      <div id="btnContainer">
+        <button id="decreaseBtn" class="buttons">decrease</button>
+        <button id="resetBtn" class="buttons">reset</button>
+        <button id="increaseBtn" class="buttons">increase</button>
+      </div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <p>hi my name is Tyler</p>
+    <br /><br /><br />
 
+    <div id="project4">
+      <button id="myRNGButton">roll</button>
+      <label id="myRNGLabel"></label>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

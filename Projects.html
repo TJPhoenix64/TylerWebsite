@@ -18,6 +18,7 @@
       <li><a href="#project4">Random Number Generator</a></li>
     </ul>
     <br /><br />
+    <br />
 
     <div id="project1">
       <h2 id="myh1">Welcome</h2>
@@ -26,6 +27,7 @@
       <button id="mySubmit">submit</button>
     </div>
     <br /><br />
+    <br />
 
     <div id="project2">
       <h2>Circumference Calculator</h2>
@@ -62,6 +64,52 @@
       <button id="myRNGButton">roll</button>
       <label id="myRNGLabel"></label>
     </div>
+    <br /><br /><br />
+
+    <div id="project5">
+      <input id="calcInput" type="text" />
+      <button id="btnclear" class="buttons">c</button>
+      <br />
+      <button id="btn7" class="buttons">7</button>
+      <button id="btn8" class="buttons">8</button>
+      <button id="btn9" class="buttons">9</button>
+      <button id="btn/" class="buttons">/</button>
+      <br />
+      <button id="btn4" class="buttons">4</button>
+      <button id="btn5" class="buttons">5</button>
+      <button id="btn6" class="buttons">6</button>
+      <button id="btn*" class="buttons">*</button>
+      <br />
+      <button id="btn1" class="buttons">1</button>
+      <button id="btn2" class="buttons">2</button>
+      <button id="btn3" class="buttons">3</button>
+      <button id="btn-" class="buttons">-</button>
+      <br />
+      <button id="btn0" class="buttons">0</button>
+      <button id="btn." class="buttons">.</button>
+      <button id="btn=" class="buttons">=</button>
+      <button id="btn+" class="buttons">+</button>
+      <br />
+    </div>
+    <br /><br /><br />
+
+    <div id="project6">
+      <form>
+        <h2>Temperature Conversion</h2>
+        <input type="number" id="TempTextBox" value="0" />
+        <br />
+        <input type="radio" id="toFahrenheit" name="unit" />
+        <label for="toFahrenheit">Celcius to Fahrenheit</label>
+        <br />
+        <input type="radio" id="toCelcius" name="unit" />
+        <label for="toCelcius">Fahrenheit to Celcius</label>
+        <br />
+        <button type="button" onclick="convert()">submit</button>
+        <p id="result">select a unit</p>
+      </form>
+      <br /><br />
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>

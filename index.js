@@ -86,6 +86,75 @@ myRNGButton.onclick = function(){
     myRNGLabel.textContent = randomNum;
 }
 
+
+
+const calcInput = document.getElementById("calcInput");
+
+document.querySelectorAll(".buttons").forEach((button) => {
+    button.onclick = function () {
+        const value = button.textContent;
+        //console.log(value);
+        if(value === "c") {
+            console.log(`deleted ${calcInput.value}`);
+            calcInput.value = "";
+        } else if(value === "="){
+            try {
+                console.log("evaluating expression");
+                calcInput.value = eval(calcInput.value + "!");
+            } catch {
+                calcInput.value = "Error";
+            }
+        } else {
+            calcInput.value += value;
+        }
+        calcInput.textContent = calcInput.value;
+    };
+});
+
+
+function eval(value){
+    let length = value.length;
+    let answer = 0;
+    let numberArray = [];
+    let expressionArray = [];
+    let currentNum = 0;
+    let expIndex = 0;
+    for(let i = 0; i < length; i++){
+        let currentChar = value.charAt(i);
+        if(isDigit(currentChar)){
+            currentNum += currentChar;
+        } else {
+            expressionArray[expIndex] = Number(currentNum);
+            currentNum = 0;
+        }
+        if(isOperator(currentChar)){
+            expressionArray[i] = currentChar;
+        }else{
+        }
+    }
+    
+    console.log(printArray(expressionArray));
+
+    return answer;
+}
+function printArray(value){
+    let printStr = "";
+    for(let i = 0; i < value.length; i++){
+        printStr += value[i] + ", "
+    }
+    return printStr;
+}
+function isDigit(value){
+    return (!isNaN(value) && value.length === 1)
+}
+function isOperator(value){
+    return (value === "+" || value === "-" || value === "*" || value === "/");
+}
+
+
+
+
+
 /*
 let username;
 username = window.prompt("Whats your username?");

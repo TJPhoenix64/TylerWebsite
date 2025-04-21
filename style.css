@@ -8,7 +8,7 @@ body {
   border-color: rgba(127, 157, 147, 0.126);
 }
 p {
-  background-color: rgb(47, 56, 48);
+  background-color: hsl(127, 9%, 20%);
   color: rgb(112, 106, 97);
 }
 img {
@@ -30,6 +30,8 @@ div {
   background-color: blanchedalmond;
   border-radius: 20px;
   text-align: center;
+  margin: auto;
+  max-width: 350px;
 }
 #countLabel {
   display: block;

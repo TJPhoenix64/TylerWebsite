@@ -90,7 +90,7 @@ myRNGButton.onclick = function(){
 
 const calcInput = document.getElementById("calcInput");
 
-document.querySelectorAll(".buttons").forEach((button) => {
+document.querySelectorAll(".buttons.calc").forEach((button) => {
     button.onclick = function () {
         const value = button.textContent;
         //console.log(value);
@@ -152,32 +152,57 @@ function isOperator(value){
 }
 
 
+const TemperatureTextBox = document.getElementById("TempTextBox");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelcius = document.getElementById("toCelcius");
+const result = document.getElementById("result");
 
+let temp;
 
+function convert(){
+    if(toFahrenheit.checked){
+        temp = Number(TemperatureTextBox.value);
+        temp = temp * 9 / 5 + 32;
+        result.textContent = temp.toFixed(1) + "°F";
+    } else if(toCelcius.checked){
+        temp = Number(TemperatureTextBox.value);
+        temp = (temp - 32) * (5 / 9);
+        result.textContent = temp.toFixed(1) + "°C";
+    } else {
+        result.textContent = "please select a unit";
+    }
+}
 
-/*
-let username;
-username = window.prompt("Whats your username?");
-console.log(`Hello ${username}`);
-*/
-/*
-document.getElementById("myh1").textContent = `hello, this is JavaScript`;
-document.getElementById("myp").textContent = age;
-*/
+function rollDice(){
+const numOfDice = document.getElementById("numOfDice").value;
+const diceResult = document.getElementById("diceResult");
+const diceImages = document.getElementById("diceImages");
+const values = [];
+const images = [];
 
-/*
-let price = 10.99;
-console.log(`you cost ${price}`);
-console.log(typeof price);
+for(let i = 0; i < numOfDice; i++){
+    const value = Math.floor(Math.random() * 6) + 1;
+    values.push(value);
+    images.push(`<img src="dice_images/dice${value}.png" alt="dice${value}">`);
+}
 
-let firstName = "TylerSigma";
-console.log(typeof firstName);
-console.log(firstName);
+diceResult.textContent = `dice: ${values.join(', ')}`;
+diceImages.innerHTML = images.join('');
+}
 
-let hasGirl = false;
-console.log(`does tyler have a girl: ${hasGirl}`);
-console.log(typeof hasGirl);
+function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
+    return '';
+}
+const passwordLength = 12;
+const includeLowercase = true;
+const includeUppercase = true;
+const includeNumbers = true;
+const includeSymbols = true;
 
-*/
+const password = generatePassword(  passwordLength, 
+                                    includeLowercase, 
+                                    includeUppercase, 
+                                    includeNumbers, 
+                                    includeSymbols);
 
 

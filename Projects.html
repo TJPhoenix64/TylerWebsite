@@ -16,6 +16,14 @@
       <li><a href="#project3">Clicker Game</a></li>
       <br />
       <li><a href="#project4">Random Number Generator</a></li>
+      <br />
+      <li><a href="#project5">Calculator</a></li>
+      <br />
+      <li><a href="#project6">Temperature Conversion</a></li>
+      <br />
+      <li><a href="#project7">Dice Roller</a></li>
+      <br />
+      <li><a href="#project8">Random Password Generator</a></li>
     </ul>
     <br /><br />
     <br />
@@ -24,7 +32,7 @@
       <h2 id="myh1">Welcome</h2>
       <label class="label">username:</label>
       <input id="myText" /><br /><br />
-      <button id="mySubmit">submit</button>
+      <button id="mySubmit" class="buttons username">submit</button>
     </div>
     <br /><br />
     <br />
@@ -42,53 +50,59 @@
           value="number"
         />
         <label for="number">number</label><br />
-        <button type="button" onclick="getRadioValue()">submit type</button>
+        <button
+          type="button"
+          onclick="getRadioValue()"
+          class="buttons circumference"
+        >
+          submit type
+        </button>
       </form>
 
       <label class="label">radius:</label>
       <input id="myRadius" /> <br /><br />
-      <button id="myRadiusSubmit">submit</button>
+      <button id="myRadiusSubmit" class="buttons circumference">submit</button>
     </div>
     <br /><br /><br />
     <div id="project3">
       <label id="countLabel">0</label>
       <div id="btnContainer">
-        <button id="decreaseBtn" class="buttons">decrease</button>
-        <button id="resetBtn" class="buttons">reset</button>
-        <button id="increaseBtn" class="buttons">increase</button>
+        <button id="decreaseBtn" class="buttons counter">decrease</button>
+        <button id="resetBtn" class="buttons counter">reset</button>
+        <button id="increaseBtn" class="buttons counter">increase</button>
       </div>
     </div>
     <br /><br /><br />
 
     <div id="project4">
-      <button id="myRNGButton">roll</button>
+      <button id="myRNGButton" class="buttons die">roll</button>
       <label id="myRNGLabel"></label>
     </div>
     <br /><br /><br />
 
     <div id="project5">
       <input id="calcInput" type="text" />
-      <button id="btnclear" class="buttons">c</button>
+      <button id="btnclear" class="buttons calc">c</button>
       <br />
-      <button id="btn7" class="buttons">7</button>
-      <button id="btn8" class="buttons">8</button>
-      <button id="btn9" class="buttons">9</button>
-      <button id="btn/" class="buttons">/</button>
+      <button id="btn7" class="buttons calc">7</button>
+      <button id="btn8" class="buttons calc">8</button>
+      <button id="btn9" class="buttons calc">9</button>
+      <button id="btn/" class="buttons calc">/</button>
       <br />
-      <button id="btn4" class="buttons">4</button>
-      <button id="btn5" class="buttons">5</button>
-      <button id="btn6" class="buttons">6</button>
-      <button id="btn*" class="buttons">*</button>
+      <button id="btn4" class="buttons calc">4</button>
+      <button id="btn5" class="buttons calc">5</button>
+      <button id="btn6" class="buttons calc">6</button>
+      <button id="btn*" class="buttons calc">*</button>
       <br />
-      <button id="btn1" class="buttons">1</button>
-      <button id="btn2" class="buttons">2</button>
-      <button id="btn3" class="buttons">3</button>
-      <button id="btn-" class="buttons">-</button>
+      <button id="btn1" class="buttons calc">1</button>
+      <button id="btn2" class="buttons calc">2</button>
+      <button id="btn3" class="buttons calc">3</button>
+      <button id="btn-" class="buttons calc">-</button>
       <br />
-      <button id="btn0" class="buttons">0</button>
-      <button id="btn." class="buttons">.</button>
-      <button id="btn=" class="buttons">=</button>
-      <button id="btn+" class="buttons">+</button>
+      <button id="btn0" class="buttons calc">0</button>
+      <button id="btn." class="buttons calc">.</button>
+      <button id="btn=" class="buttons calc">=</button>
+      <button id="btn+" class="buttons calc">+</button>
       <br />
     </div>
     <br /><br /><br />
@@ -104,11 +118,31 @@
         <input type="radio" id="toCelcius" name="unit" />
         <label for="toCelcius">Fahrenheit to Celcius</label>
         <br />
-        <button type="button" onclick="convert()">submit</button>
-        <p id="result">select a unit</p>
+        <button
+          type="button"
+          onclick="convert()"
+          class="buttons tempConversion"
+        >
+          submit
+        </button>
+        <p id="result"></p>
       </form>
       <br /><br />
     </div>
+    <br /><br />
+    <div id="project7">
+      <h2>Dice Roller Program</h2>
+      <label># of dice:</label>
+      <input type="number" value="1" min="1" id="numOfDice" />
+      <button onclick="rollDice()" class="buttons dice">Roll Dice</button>
+      <div id="diceResult"></div>
+      <div id="diceImages"></div>
+    </div>
+    <br /><br />
+    <div id="project8">
+      <h2>Random Password Generator</h2>
+    </div>
+    <br /><br />
 
     <script src="index.js"></script>
   </body>

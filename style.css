@@ -9,6 +9,7 @@ body {
 }
 p {
   background-color: hsl(127, 9%, 20%);
+  border-radius: 5px;
   color: rgb(112, 106, 97);
 }
 img {
@@ -32,11 +33,13 @@ div {
   text-align: center;
   margin: auto;
   max-width: 350px;
+  padding: 10px;
+  box-shadow: 5px, 5px, 15px, black;
 }
 #countLabel {
   display: block;
   text-align: center;
-  font-size: 10ew;
+  font-size: 3em;
   font-family: Helvetica;
 }
 #btnContainer {
@@ -54,7 +57,26 @@ div {
 .buttons:hover {
   background-color: blue;
 }
+.buttons:active {
+  background-color: blueviolet;
+}
 #myRNGButton {
   font-size: 3em;
   padding: 5px, 25px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#numOfDice {
+  text-align: center;
+}
+
+#diceResult {
+  margin: 25px;
+}
+#diceImages img {
+  width: 125px;
+  margin: 5px;
 }

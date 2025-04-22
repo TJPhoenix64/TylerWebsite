@@ -1,10 +1,3 @@
-console.log("Hello");
-console.log("I Like Pizza");
-/*
-window.alert(`this is an alert`);
-window.alert(`I Like Pizza!!`);
-*/
-//this is a comment
 let username;
 document.getElementById("mySubmit").onclick = function(){
     username = document.getElementById("myText").value;
@@ -35,7 +28,6 @@ function getRadioValue() {
 let radius;
 const PI = Math.PI;
 
-console.log(isNumber, typeof isNumber);
 document.getElementById("myRadiusSubmit").onclick = function(){
     if(isNumber == null){
         alert("Please select an answer type before typing a radius");
@@ -49,8 +41,6 @@ document.getElementById("myRadiusSubmit").onclick = function(){
             let circumference = radius * 2;
             document.getElementById("myh3").textContent = `your circumference is: ${circumference}pi`;
         }
-        
-   
     }
 }
 
@@ -191,7 +181,31 @@ diceImages.innerHTML = images.join('');
 }
 
 function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
-    return '';
+
+    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberChars = "123456789";
+    const symbolChars = "!@#$%^&*()_+-= ";
+    
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includeLowercase ? lowercaseChars : "";
+    allowedChars += includeUppercase ? uppercaseChars : "";
+    allowedChars += includeNumbers ? numberChars : "";
+    allowedChars += includeSymbols ? symbolChars : "";
+    if(length <= 0){
+        return `(password length must be at least one)`;
+    } 
+    if(allowedChars.length === 0){
+        return `(At least one set of characters needs to be selected )`;
+    }
+
+    for(let i = 0; i < length; i++){
+        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+        password += allowedChars[randomIndex];
+    }
+    return password;
 }
 const passwordLength = 12;
 const includeLowercase = true;
@@ -204,5 +218,5 @@ const password = generatePassword(  passwordLength,
                                     includeUppercase, 
                                     includeNumbers, 
                                     includeSymbols);
-
+ console.log(`generated password: ${password}`);
 

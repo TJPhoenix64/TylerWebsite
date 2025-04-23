@@ -80,3 +80,9 @@ button {
   width: 125px;
   margin: 5px;
 }
+
+#passwordLength {
+  text-align: center;
+  font-weight: bolder;
+  width: 75px;
+}

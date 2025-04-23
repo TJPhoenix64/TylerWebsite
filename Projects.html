@@ -52,7 +52,7 @@
         <label for="number">number</label><br />
         <button
           type="button"
-          onclick="getRadioValue()"
+          onclick="getRadioValueCircumference()"
           class="buttons circumference"
         >
           submit type
@@ -141,6 +141,27 @@
     <br /><br />
     <div id="project8">
       <h2>Random Password Generator</h2>
+      <label for="passwordLength">password length:</label>
+      <input type="number" id="passwordLength" min="1" value="1" />
+      <form>
+        <label for="lowercase">lowercase </label>
+        <input id="lowercase" type="checkbox" name="passwordCheckboxes" /><br />
+        <label for="uppercase">uppercase </label>
+        <input id="uppercase" type="checkbox" name="passwordCheckboxes" /><br />
+        <label for="numbers">numbers </label>
+        <input id="numbers" type="checkbox" name="passwordCheckboxes" /><br />
+        <label for="symbols">symbols </label>
+        <input id="symbols" type="checkbox" name="passwordCheckboxes" /><br />
+      </form>
+
+      <button
+        id="passwordButton"
+        class="buttons passowordGenerator"
+        onclick="fullPasswordGeneration()"
+      >
+        Generate Password
+      </button>
+      <h3 id="passwordDisplay">Your new password is:</h3>
     </div>
     <br /><br />
 

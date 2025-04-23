@@ -6,7 +6,7 @@ document.getElementById("mySubmit").onclick = function(){
     }
 }
 let isNumber;
-function getRadioValue() {
+function getRadioValueCircumference() {
     const selectedRadio = document.querySelector('input[name="circCalcAnsSelector"]:checked');
     if (selectedRadio) {
       const selectedValue = selectedRadio.value;
@@ -180,12 +180,15 @@ diceResult.textContent = `dice: ${values.join(', ')}`;
 diceImages.innerHTML = images.join('');
 }
 
+
+
 function generatePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols){
 
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const numberChars = "123456789";
     const symbolChars = "!@#$%^&*()_+-= ";
+
     
     let allowedChars = "";
     let password = "";
@@ -196,27 +199,36 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
     allowedChars += includeSymbols ? symbolChars : "";
     if(length <= 0){
         return `(password length must be at least one)`;
-    } 
-    if(allowedChars.length === 0){
+    } else if(allowedChars.length === 0){
         return `(At least one set of characters needs to be selected )`;
+    } else {
+        for(let i = 0; i < length; i++){
+            const randomIndex = Math.floor(Math.random() * allowedChars.length);
+            password += allowedChars[randomIndex];
+        }
+       return `your password is: ${password}`;
     }
-
-    for(let i = 0; i < length; i++){
-        const randomIndex = Math.floor(Math.random() * allowedChars.length);
-        password += allowedChars[randomIndex];
-    }
-    return password;
 }
-const passwordLength = 12;
-const includeLowercase = true;
-const includeUppercase = true;
-const includeNumbers = true;
-const includeSymbols = true;
 
-const password = generatePassword(  passwordLength, 
-                                    includeLowercase, 
-                                    includeUppercase, 
-                                    includeNumbers, 
-                                    includeSymbols);
- console.log(`generated password: ${password}`);
+function getCheckboxValuePassword() {
+    const length = document.getElementById("passwordLength");
+    const lowercaseBox = document.getElementById("lowercase");
+    const uppercaseBox = document.getElementById("uppercase");
+    const numberBox = document.getElementById("numbers");
+    const symbolBox = document.getElementById("symbols");
+    const answerArray = [];
 
+    answerArray[0] = Number(length.value);
+    answerArray[1] = lowercaseBox.checked;
+    answerArray[2] = uppercaseBox.checked;
+    answerArray[3] = numberBox.checked;
+    answerArray[4] = symbolBox.checked;
+    return answerArray;
+
+}
+function fullPasswordGeneration() {
+    const choicesArray = getCheckboxValuePassword();
+    let password = generatePassword(choicesArray[0], choicesArray[1], choicesArray[2], choicesArray[3], choicesArray[4]);
+    const passwordDisplay = document.getElementById("passwordDisplay");
+    passwordDisplay.textContent = password;
+}
